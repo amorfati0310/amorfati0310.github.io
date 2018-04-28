@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 28 2018 20:58:40 GMT+0900">
-        <meta property="article:modified_time" content="Sat Apr 28 2018 23:26:42 GMT+0900">
+        <meta property="article:modified_time" content="Sat Apr 28 2018 23:29:46 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/28/0428-Programmers-and-Rest/index.html",
     "headline": "0428-Programmers-and-Rest",
     "datePublished": "Sat Apr 28 2018 20:58:40 GMT+0900",
-    "dateModified": "Sat Apr 28 2018 23:26:42 GMT+0900",
+    "dateModified": "Sat Apr 28 2018 23:29:46 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Programmers"><span class="post-toc-number">1.</span> <span class="post-toc-text">Programmers</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Programmers"><span class="post-toc-number">1.</span> <span class="post-toc-text">Programmers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#피드…"><span class="post-toc-number">2.</span> <span class="post-toc-text">피드…</span></a></li></ol>
     </ul>
     
 
@@ -495,6 +495,8 @@
 <li>3번문제 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">랜덤하게 자연수 숫자들을 받음 A,B</span><br><span class="line">A-&gt; 랜덤하게 섞고 내보냄 -&gt; </span><br><span class="line">B는 이것을 보고 가장 많은 점수를 낼 수 있는 조합으로 섞음 -&gt; </span><br><span class="line">B의 가장 높은 점수를 내는 함수를 구하시오 </span><br><span class="line"></span><br><span class="line">아쉬움</span><br><span class="line"><span class="number">1.</span> 접근한 방법 sort -&gt; sort B 의 작은 값부터 A의 가장 작은값보다 크면 같이 없애주고 bScore을 증가 시켜준다 </span><br><span class="line">splice로 해당 값이 나오면 뺴줘서 결국 다 돌게 하기 </span><br><span class="line"></span><br><span class="line">이 부분 시간 복잡도에서 안 좋은 점수를 받았다. 그래서 결국 <span class="number">85</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">A, B</span>) </span>&#123;</span><br><span class="line">  A.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a-b);</span><br><span class="line">  B.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>a-b);</span><br><span class="line">  <span class="keyword">let</span> bScore = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i =<span class="number">0</span>, &#123;length&#125;=B; i&lt;length; i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>, &#123;length&#125;=A; j&lt;length; j++)&#123;</span><br><span class="line">         <span class="keyword">if</span>(B[i]&gt;A[j])&#123;</span><br><span class="line">            B.splice(i,<span class="number">1</span>)</span><br><span class="line">            A.splice(j,<span class="number">1</span>)</span><br><span class="line">            bScore+=<span class="number">1</span></span><br><span class="line">            i=i<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> bScore;</span><br><span class="line">&#125;</span><br><span class="line">solution([<span class="number">5</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">7</span>],[<span class="number">2</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">8</span>]);</span><br><span class="line">solution([<span class="number">6</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">7</span>],[<span class="number">3</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//splice로 하나씩 짜르는 것보단 이렇게 하는 것이 날 것 같다. </span></span><br><span class="line">            B = B.slice(i+<span class="number">1</span>,initLength)</span><br><span class="line">            A = A.slice(j+<span class="number">1</span>,initLength)</span><br><span class="line">            bScore+=<span class="number">1</span></span><br><span class="line">            i=j=<span class="number">-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ETC</span></span><br><span class="line"><span class="comment">// 아무튼 뭔가 for -for문에 slice잘 못 풀은 느낌 </span></span><br><span class="line"><span class="number">1.</span> 만약에 A는 그냥 주어지고 B배열을 섞어서 ,B배열과  B의 가장 높은 점수를 구하라는 문제로 나올 수도 있겠다</span><br></pre></td></tr></table></figure>
+<h3 id="피드…"><a href="#피드…" class="headerlink" title="피드…"></a>피드…</h3><p>내일 알바하고 나서 부터 다시 열심히 살겠습니다 :D<br>방학 기분을 냈습니다요</p>
+
         
     
 
