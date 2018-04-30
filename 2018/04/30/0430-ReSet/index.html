@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Apr 30 2018 14:12:46 GMT+0900">
-        <meta property="article:modified_time" content="Mon Apr 30 2018 18:13:24 GMT+0900">
+        <meta property="article:modified_time" content="Mon Apr 30 2018 18:14:45 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/04/30/0430-ReSet/index.html",
     "headline": "0430-ReSet",
     "datePublished": "Mon Apr 30 2018 14:12:46 GMT+0900",
-    "dateModified": "Mon Apr 30 2018 18:13:24 GMT+0900",
+    "dateModified": "Mon Apr 30 2018 18:14:45 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -583,7 +583,7 @@
 <ol start="25">
 <li>클린코드 -&gt; 개발문화(리뷰,품질우선, 페어프로그래밍과 잘 갖춰있는 회사, 함께 성장 이타적인 마인드)</li>
 </ol>
-<p>저런 회사 갈 수 있을까?…제발 열공해서 개발문화 좋은데로 가기를 </p>
+<p>저런 회사 갈 수 있을까?…제발 열공해서 개발문화 좋은데로 가기를 바래</p>
 <h3 id="DaliyAlgorithm"><a href="#DaliyAlgorithm" class="headerlink" title="DaliyAlgorithm"></a>DaliyAlgorithm</h3><p>1시간 반 -&gt; 뭔가 풀릴 것 같아서 계속 시도 했는데 아쉽다.<br>내일 한 번 더 시도 </p>
 <p>Programmers가장 긴 펠린드롬 …<br>for안에 if문이 엄청 많다. 처음 설계가 잘 못 된 기분을 지울 수가 없다. </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">설게 </span><br><span class="line"></span><br><span class="line">1. 앞뒤가 같은 글자이면 다음 글자로 진행 </span><br><span class="line">2. 아닌 경우 같은 </span><br><span class="line">2.1 위치가 나오면 maxLength랑 비교해주고 </span><br><span class="line">2.2 시작위치를 고려 </span><br><span class="line">/// 잘 못 생각한 부분 같은 위치가 나오면 무조건 끝난다고 생각했는데 짝수일 떄  </span><br><span class="line">zz 이런 글자인 경우 2글자  팰린드롬의 경우는 끝나지 않고 크로스 된다.</span><br><span class="line">if(i===length-(j+1))&#123;</span><br><span class="line">        set.push(i)</span><br><span class="line">        maxLength = maxLength===1 ? set.length : Math.max(set.length, maxLength)</span><br><span class="line">        set = [];</span><br><span class="line">        i=startIdx</span><br><span class="line">        startIdx=undefined</span><br><span class="line">        break;</span><br><span class="line">      &#125;</span><br><span class="line">      else&#123;</span><br><span class="line">        if(s[i]===s[length-(j+1)])&#123;</span><br><span class="line">          startIdx = startIdx===undefined ? i : Math.min(startIdx, i)</span><br><span class="line">          set.push(i,length-(j+1))</span><br><span class="line">          i+=1;</span><br><span class="line">        &#125; </span><br><span class="line"></span><br><span class="line">3. ... 지금까지 기록한 palindrom이 맞는지 기록 </span><br><span class="line"></span><br><span class="line">//  토-어 토-있 토-마 토-토 (O)-&gt; 토마토 -&gt;</span><br><span class="line">//  에토마토씨비 에-비 에-씨- 에-토 에-마 -&gt; 토 -비 토 -씨 - 토 토 (ㅇ)</span><br><span class="line">//  에씨비에씨비토마토</span><br><span class="line">//</span><br></pre></td></tr></table></figure>
