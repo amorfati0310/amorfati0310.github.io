@@ -43,8 +43,6 @@
     
     <title>
         
-            0414-Refactoring-and-Commit | 
-        
         Hexo
     </title>
 
@@ -215,7 +213,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hexo">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/page/4/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -230,16 +228,13 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/">
+    <meta property="og:url" content="http://yoursite.com/page/4/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="0414-Refactoring-and-Commit | Hexo">
+    <meta property="og:title" content="Hexo">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
-    
-        <meta property="article:published_time" content="Sun Apr 15 2018 03:28:31 GMT+0900">
-        <meta property="article:modified_time" content="Mon Apr 16 2018 17:40:44 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,43 +242,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html" />
+        <link rel="canonical" href="http://yoursite.com/page/4/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html",
-    "headline": "0414-Refactoring-and-Commit",
-    "datePublished": "Sun Apr 15 2018 03:28:31 GMT+0900",
-    "dateModified": "Mon Apr 16 2018 17:40:44 GMT+0900",
-    "author": {
-        "@type": "Person",
-        "name": "John Doe",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/avatar.png"
-        },
-        "description": "Hi, nice to meet you"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "Hexo",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
-        }
-    },
-    "keywords": "",
-    "description": "",
-}
-</script>
 
 
     
@@ -317,231 +282,98 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TIL"><span class="post-toc-number">1.</span> <span class="post-toc-text">TIL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#반성"><span class="post-toc-number">2.</span> <span class="post-toc-text">반성</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ArrayParser"><span class="post-toc-number">3.</span> <span class="post-toc-text">ArrayParser</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Test"><span class="post-toc-number">4.</span> <span class="post-toc-text">Test</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#알고리즘-…"><span class="post-toc-number">5.</span> <span class="post-toc-text">알고리즘 …</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#프로젝트-…"><span class="post-toc-number">6.</span> <span class="post-toc-text">프로젝트 …</span></a></li></ol>
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+        
+    
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2018/04/07/hello-world/">Hello World</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            Welcome to Hexo
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2018/04/07/hello-world/" target="_self">post.continue</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
+            </div>
+            <div>
+                <strong>John Doe</strong>
+                <span>Apr 07, 2018</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+    <!-- Index nav -->
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <a class="extend prev" rel="prev" href="/page/3/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+        </nav>
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
 </script>
 
-        
-    
-            <p class="article-headline-p">
-                0414-Refactoring-and-Commit
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>John Doe</strong>
-        <span>Apr 15, 2018</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=0414-Refactoring-and-Commit&url=http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                share.toWeibo
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=0414-Refactoring-and-Commit&url=http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html&via=John Doe" target="_blank">
-            <li class="mdl-menu__item">
-                share.toTwitter
-            </li>
-        </a>
-    
-
-    <!-- Share Facebook -->
-    
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                share.toFacebook
-            </li>
-        </a>
-    
-
-    <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/15/0414-Refactoring-and-Commit/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                share.toGplus
-            </li>
-        </a>
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
     
 </div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h3 id="TIL"><a href="#TIL" class="headerlink" title="TIL"></a>TIL</h3><p>til 늦게라도 매일 꼭 하고 있는 것은 칭찬해주고 싶다.<br>커밋메시지 -&gt; 나눠서 한 것<br>리뷰 고치면서 피드백 자체가 커밋 -&gt; 안 나누면 안 받을 것이다라는 얘기를 들어서 확실히… 이번엔 의식하고 업데이트<br>생각 나는데로 하긴 했다. 이 참에 습관화 하자<br>근데 얼른 자자 … </p>
-<h3 id="반성"><a href="#반성" class="headerlink" title="반성"></a>반성</h3><p>유튜브랑 웹툰… 조금만 보자 … =: 망했… </p>
-<ul>
-<li>토요일은 늦잠데이 잠 실컷 자야지 하고 맘 먹고 자면 … 반나절을 자버린다.<br>조금 더 성실할 필요가 있다!!!</li>
-</ul>
-<h3 id="ArrayParser"><a href="#ArrayParser" class="headerlink" title="ArrayParser"></a>ArrayParser</h3><p>내일까지는 다 해야지 목표 </p>
-<p>다형성으로 커버하려다가.. 오히려 꼬였다. 조그마한 함수로 특정한 함수가 많을 수록 더 보기도 좋고 직관적인 것 같다.<br>한 꺼번에 커버하려는 부분은 지금은 우선 적게 하는 방향으로 하자 </p>
-<p>for if if 였던 부분을 함수 하나에서 if 를 처리해주게 위에 빼고 집어 넣었는데 …<br>피드백 리뷰가 이렇게 처리 하는 것이 맞나? if if가 좀 빠지니까 좀 더 깔끔해 보이기는 하는데 뭔가 석연찮다  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const updateCloseState = (singleCharacter, arrayClose, objClose) =&gt; &#123;</span><br><span class="line">    updatedArrayClose = arrayClose</span><br><span class="line">    updatedObjClose = objClose</span><br><span class="line">    if(brackets[singleCharacter])&#123;</span><br><span class="line">        updatedArrayClose = brackets[singleCharacter](arrayClose)</span><br><span class="line">        updatedObjClose = brackets[singleCharacter](objClose)</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;updatedArrayClose, updatedObjClose&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  _each(str, function(singleCharacter)&#123;</span><br><span class="line">        if(isStringItemEnd(singleCharacter, arrayClose, objClose))&#123;</span><br><span class="line">            splitItemList.push(splitItem)</span><br><span class="line">            splitItem = &apos;&apos;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            const &#123;updatedArrayClose, updatedObjClose&#125; = updateCloseState(singleCharacter, arrayClose, objClose) </span><br><span class="line">            arrayClose = updatedArrayClose</span><br><span class="line">            objClose = updatedObjClose</span><br><span class="line">            splitItem += singleCharacter</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3><p>테스트에 toBe 왜 다른지를 찾았다… 알고보니 배열 값 비교여서 값을 비교할 수가 없었다.<br>그래서 ArrayToBe 라는 메소드를 하나 더 추가했다. 여기서 값을 비교할 떄 쓰는 eqaul은 message는<br>없도록 하게 다시 비슷한 작업을 해서 추가했는데 음…이거는 어쩔수 없나?</p>
-<p>네이밍 Error 네이밍 너무 어렵다<br>중복 되는 부분이 많아서 저 함수에서 저 동작만 빼고 이런게 있을 것 같은데 없나? 찾아봐야겠다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const equal = (a,b)=&gt; &#123;</span><br><span class="line">    if(a!== b) throw Error(`: FAIL  targetValue is $&#123;a&#125;, expectValue is $&#123;b&#125;`)</span><br><span class="line">    console.log(`: OK  target Value : $&#123;a&#125; expectedValue : $&#123;b&#125;`)</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const equalToNotMsg = (a,b)=&gt;&#123;</span><br><span class="line">    if(a!== b) throw Error(`: FAIL  targetValue is $&#123;a&#125;, expectValue is $&#123;b&#125;`)</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="알고리즘-…"><a href="#알고리즘-…" class="headerlink" title="알고리즘 …"></a>알고리즘 …</h3><p>알고리즘 1시간 꾸준히 한다는 약속은 이번주 어디로… </p>
-<h3 id="프로젝트-…"><a href="#프로젝트-…" class="headerlink" title="프로젝트 …"></a>프로젝트 …</h3><p>프로젝트 할 시간….</p>
-
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2018/04/15/0415-break/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            post.newer
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2018/04/13/0413-react-native-login/" id="post_nav-older" class="next-content">
-            post.older
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
 
 
                     
