@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Wed May 23 2018 01:54:29 GMT+0900">
-        <meta property="article:modified_time" content="Wed May 23 2018 15:00:04 GMT+0900">
+        <meta property="article:modified_time" content="Wed May 23 2018 22:39:31 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/23/0523-Like-Haruki/index.html",
     "headline": "0523-Like-Haruki",
     "datePublished": "Wed May 23 2018 01:54:29 GMT+0900",
-    "dateModified": "Wed May 23 2018 15:00:04 GMT+0900",
+    "dateModified": "Wed May 23 2018 22:39:31 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0523"><span class="post-toc-number">2.</span> <span class="post-toc-text">0523</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘부터-타입스크립트로-nextCamp-level2과정-복습-겸-step다시-진행-시작"><span class="post-toc-number">3.</span> <span class="post-toc-text">오늘부터 타입스크립트로 nextCamp level2과정 복습 겸 step다시 진행 시작</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nextCamp-크롱이-해-준-리뷰"><span class="post-toc-number"></span> <span class="post-toc-text">nextCamp 크롱이 해 준 리뷰</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0523"><span class="post-toc-number">2.</span> <span class="post-toc-text">0523</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘부터-타입스크립트로-nextCamp-level2과정-복습-겸-step다시-진행-시작"><span class="post-toc-number">3.</span> <span class="post-toc-text">오늘부터 타입스크립트로 nextCamp level2과정 복습 겸 step다시 진행 시작</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nextCamp-크롱이-해-준-리뷰"><span class="post-toc-number"></span> <span class="post-toc-text">nextCamp 크롱이 해 준 리뷰</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#커맨드-패턴"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">커맨드 패턴</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#웹-자판기-리팩토링"><span class="post-toc-number">1.</span> <span class="post-toc-text">웹 자판기 리팩토링</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#타입스크립트"><span class="post-toc-number">2.</span> <span class="post-toc-text">타입스크립트</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#회고"><span class="post-toc-number">3.</span> <span class="post-toc-text">회고</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WHY"><span class="post-toc-number">4.</span> <span class="post-toc-text">WHY?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dailyAlgorithm"><span class="post-toc-number">5.</span> <span class="post-toc-text">dailyAlgorithm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#etc"><span class="post-toc-number">6.</span> <span class="post-toc-text">etc</span></a></li></ol>
     </ul>
     
 
@@ -499,6 +499,48 @@
 <p>다시 검색해서 알아본 결과 내가 짠 코드 부분은 mvp패턴에 가깝다<br>mvc mvp mvvm 데이터 흐름 및 컨트롤러에 역할에 따라서 이렇게 3가지로나 분리되는 구나<br>이렇게 분리된 패턴 mvc에서는 controller로 입력이 들어오고 view가 모델을 바꾸고<br>그런데 뷰가 아닌 부분에서 입력이 들어올 수 있나?.?<br>mvp는 내가 생각한 모델-뷰가 컨트롤러를 통해서만 서로 왔다갔다 하는 부분 </p>
 <p>mvp의 단점은<br>뷰와 프레젠터가 1:1로 강한 의존성을 가지게 된다.<br>강한 의존성 <-><br>모델 뷰 뷰모델<br>컨트롤러가 뷰모델을 현재 프레임워크가 가지는 패턴이라고 한다.<br>두가지 패턴이 사용된다고 한다 커맨드 패턴과 data Binding </-></p>
 <p>작게 본 개선사항으로는 비슷한 메소드들이 데이터만 달라지고 같은 처리를 하는 경우들이 많아서 수정해야 될 것 같습니다.</p>
+<p>지금은 스스로 고민하는 과정이 중요하다고 함 !!!<br>디자인에 대한 고민을 많이 하고 리팩토링 고우!<br>약간 짬이나 생각하기 어려워서<br><-><br>좋은 케이스들을 많이 익혀보고 그것을 토대로 생각해보는 것<br>적절히 섞어서 해야지 뭐:D 뭐든지 적당히가 중요함 </-></p>
+<h4 id="커맨드-패턴"><a href="#커맨드-패턴" class="headerlink" title="커맨드 패턴"></a>커맨드 패턴</h4><p>커맨드 패턴(Command pattern)이란 요청을 객체의 형태로 캡슐화하여 사용자가 보낸 요청을 나중에 이용할 수 있도록 매서드 이름, 매개변수 등 요청에 필요한 정보를 저장 또는 로깅, 취소할 수 있게 하는 패턴이다.</p>
+<p>커맨드 패턴에는 명령(command), 수신자(receiver), 발동자(invoker), 클라이언트(client)의 네개의 용어가 항상 따른다. 커맨드 객체는 수신자 객체를 가지고 있으며, 수신자의 메서드를 호출하고, 이에 수신자는 자신에게 정의된 메서드를 수행한다. 커맨드 객체는 별도로 발동자 객체에 전달되어 명령을 발동하게 한다. 발동자 객체는 필요에 따라 명령 발동에 대한 기록을 남길 수 있다. 한 발동자 객체에 다수의 커맨드 객체가 전달될 수 있다. 클라이언트 객체는 발동자 객체와 하나 이상의 커맨드 객체를 보유한다. 클라이언트 객체는 어느 시점에서 어떤 명령을 수행할지를 결정한다. 명령을 수행하려면, 클라이언트 객체는 발동자 객체로 커맨드 객체를 전달한다.</p>
+<p>봤는데 .. 레스토랑에서 종업원이 메뉴 전달 하는 거랑 비슷하다고 하는데… 근데<br>기존에 컨트롤러가 전달하는 거랑 그렇게 큰 차이가 있는 것인가?.?</p>
+<h3 id="웹-자판기-리팩토링"><a href="#웹-자판기-리팩토링" class="headerlink" title="웹 자판기 리팩토링"></a>웹 자판기 리팩토링</h3><p>todo 체크리스트 </p>
+<p>[]<br>[]<br>[]</p>
+<h3 id="타입스크립트"><a href="#타입스크립트" class="headerlink" title="타입스크립트"></a>타입스크립트</h3><p>타입스 </p>
+<h3 id="회고"><a href="#회고" class="headerlink" title="회고"></a>회고</h3><p>오늘 할 일 </p>
+<ol>
+<li>웹 자판기 pr리뷰 받은 내용 정리 하고 리팩토링 후 다시 pr (0.5) 조금 고치는 중 </li>
+<li>ArrayParser 다른 사람들 코드 보고 공부 </li>
+<li>TIL (ㅇ)</li>
+<li>cs50 1시간 듣기</li>
+<li>타입스크립트 인강 및 코드스피츠 인강 듣고 공부하기 (0.5) 타입스크립트 인강만 반 정도 들음</li>
+<li>daily Algorithm </li>
+</ol>
+<p>벌써 밤 10시인데 지킨 것이 거의 없는데?.?<br>알고리즘이랑 cs50얼른 들어서 조금이라도 높여야겠다…</p>
+<h3 id="WHY"><a href="#WHY" class="headerlink" title="WHY?"></a>WHY?</h3><p>오늘 계획만큼 못 한 원인 분석 </p>
+<ol>
+<li>구조 분석하라는 부분을 잘 못 이해 + 어떤 문제가 있을까 생각해보고 대답했으나.. 음 뷰-컨트롤러가 비대해지는 것은 그리 큰 문제가 아니였다. 그래서 검색 -&gt; 기존 패러다임에 문제점을 분석 -&gt;내가 짠 것은 mvp와 유사 -&gt; mvvm ?.?…</li>
+</ol>
+<p>본질은 </p>
+<ul>
+<li>M,V 를 어떻게 의존하지 않고 잘 나눌것인가?</li>
+<li>각각 테스트 가능한 코드를 만들려면 어떻게 해야할까? 내가 만든 구조가 테스트 가능한가?</li>
+<li>가장 변화가 심할 예정인 부분은 무엇인가? 그것은 다른 클래스(mvc끼리나 v끼리등)를 의존하지 않고 있어서 수정이 용이한가?<br>요런 것들등을 고민해보라는 것이 의도였다.</li>
+</ul>
+<p>왜 =&gt; 크롱 의도 잘 못 파악 + =&gt; MVC 패턴 공부 중 -&gt; mvvm에서 databinding &amp; command패턴 읽어봤으나… 글쎄요<br>대략적으로 이런 패턴들이 발전해왔구나 정도 이해지 아쉬움 그런데 여기에 시간을 너무 많이 투자했다.<br>질문이 너무 늦었다. 질문 할 까 말까? 무엇을 해야 하지 … 이렇게 고민 하는 시간이 …내가 찾아봐도 모르는 건가 더 찾아봐야 되는 거 아닌가 + /</p>
+<ol start="2">
+<li>늦잠… 어제 너무 늦게 잤으니 할 말은 없다 =&gt; 오늘 일찍 자자 </li>
+</ol>
+<p>4-10시 -&gt; 11시반 학원 도착<br>그래도 한 번 더 빨리 깼었는데 아쉽 </p>
+<ol start="3">
+<li><p>집중을 잘 못했다. 이거했다 저거했다… 하나 할 때는 하나만 집중해서 끝내고 다음 것을 처리하려고 하자 </p>
+</li>
+<li><p>키보드를 안 가지고 와서 듀얼을 쓸 때 좀 많이 불편했다. 매인 화면을 맥북으로 보고 가끔 보는 화면을 더 큰 모니터에 놓고 해야 된다니 _= 키보드 안 가지고 옴 생산성</p>
+</li>
+</ol>
+<p>결론 의도 잘 못 파악 삽질 + 잘 모르는 어려운 개념에 시간 너무 많이 쏟음<br>그리고 키보드 안 가지고 오고 집중력 + 늦잠으로 인한 공부시간 부족 끝  </p>
+<p>내일은 이런 점은 좀 덜하도록 화이팅 하:3</p>
+<h3 id="dailyAlgorithm"><a href="#dailyAlgorithm" class="headerlink" title="dailyAlgorithm"></a>dailyAlgorithm</h3><p><a href="https://www.interviewcake.com/question/python/stock-price" target="_blank" rel="noopener">고우+_+고우</a></p>
+<h3 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h3><p>다행이도 mysql 배점이 높지 않았나 보다 배민 2차를 볼 수 있게 되엇다. 야호 !<br>토요일 근데 티켓까지 사노은 약속이 있는데 에효 ‘ㅁ’;;; 늦게 가는 수 밖에<br>수/목/금/토 알고리즘 2시간 이상 면접에 나왔던 좋은 문제들 위주로 풀어보는 연습을 해보자 </p>
 
         
     
@@ -518,6 +560,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/05/24/0524-know-know/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            post.newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -617,7 +667,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
             </ul>
         </li>
         
