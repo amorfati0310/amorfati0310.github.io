@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon May 28 2018 02:40:05 GMT+0900">
-        <meta property="article:modified_time" content="Mon May 28 2018 23:32:17 GMT+0900">
+        <meta property="article:modified_time" content="Mon May 28 2018 23:35:10 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/28/0528-css-rendering/index.html",
     "headline": "0528-css-rendering",
     "datePublished": "Mon May 28 2018 02:40:05 GMT+0900",
-    "dateModified": "Mon May 28 2018 23:32:17 GMT+0900",
+    "dateModified": "Mon May 28 2018 23:35:10 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘-할-일"><span class="post-toc-number">1.</span> <span class="post-toc-text">오늘 할 일 !</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘-배운-점"><span class="post-toc-number">2.</span> <span class="post-toc-text">오늘 배운 점</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#daily-Algorithm-617-leetCode"><span class="post-toc-number">3.</span> <span class="post-toc-text">daily Algorithm 617 leetCode]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#타입스크립트"><span class="post-toc-number">4.</span> <span class="post-toc-text">타입스크립트</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘-할-일"><span class="post-toc-number">1.</span> <span class="post-toc-text">오늘 할 일 !</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#오늘-배운-점"><span class="post-toc-number">2.</span> <span class="post-toc-text">오늘 배운 점</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#daily-Algorithm-617-leetCode"><span class="post-toc-number">3.</span> <span class="post-toc-text">daily Algorithm 617 leetCode]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#타입스크립트"><span class="post-toc-number">4.</span> <span class="post-toc-text">타입스크립트</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cssRendering"><span class="post-toc-number">5.</span> <span class="post-toc-text">cssRendering</span></a></li></ol>
     </ul>
     
 
@@ -513,6 +513,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">TreeNode</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">this</span>.val = val;</span><br><span class="line">       <span class="keyword">this</span>.left = <span class="keyword">this</span>.right = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mergeTrees = <span class="function"><span class="keyword">function</span>(<span class="params">t1, t2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 둘 중 하나도 값이 없는 경우 </span></span><br><span class="line">    <span class="keyword">const</span> mergePoint = <span class="function">(<span class="params">t1, t2</span>)=&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(t1.val===<span class="literal">undefined</span> &amp;&amp; t2.val===<span class="literal">undefined</span>) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode();</span><br><span class="line">      <span class="comment">// 둘 중 하나만 값이 있는 경우</span></span><br><span class="line">      <span class="keyword">if</span>(t1.val===<span class="literal">undefined</span> || t2.val===<span class="literal">undefined</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(t1.val===<span class="literal">undefined</span>) <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(t2.val);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(t1.val);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(t1.val+t2.val)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 둘다 시작 값이 있는 경우 </span></span><br><span class="line">    <span class="keyword">const</span> currentPoint = mergePoint(t1,t2)</span><br><span class="line"> </span><br><span class="line">    currentPoint.left = mergeTrees(t1.left, t2.left)</span><br><span class="line">    currentPoint.right = mergeTrees(t1.right, t2.right)</span><br><span class="line">    <span class="keyword">return</span> currentPoint;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>진행상황</p>
 <h3 id="타입스크립트"><a href="#타입스크립트" class="headerlink" title="타입스크립트"></a>타입스크립트</h3><p>기본 설정이라도 다시 한 번 해보자 !</p>
+<h3 id="cssRendering"><a href="#cssRendering" class="headerlink" title="cssRendering"></a>cssRendering</h3><p><a href="https://github.com/childrrenOfCrong/codeSpitz-CssRendering/tree/master/dali/01-1" target="_blank" rel="noopener">CSS-Rendering-정리.01-01</a></p>
 
         
     
@@ -532,6 +533,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/05/29/0529-EarlyBirds/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            post.newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -631,7 +640,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">33</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">34</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
             </ul>
         </li>
         
