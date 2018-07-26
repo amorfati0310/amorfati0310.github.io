@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Thu Jul 26 2018 12:09:56 GMT+0900">
-        <meta property="article:modified_time" content="Thu Jul 26 2018 12:49:01 GMT+0900">
+        <meta property="article:modified_time" content="Thu Jul 26 2018 23:37:03 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/07/26/0726-WakeUp/index.html",
     "headline": "0726-WakeUp",
     "datePublished": "Thu Jul 26 2018 12:09:56 GMT+0900",
-    "dateModified": "Thu Jul 26 2018 12:49:01 GMT+0900",
+    "dateModified": "Thu Jul 26 2018 23:37:03 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#플래닝"><span class="post-toc-number">2.</span> <span class="post-toc-text">플래닝</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NextStep"><span class="post-toc-number">3.</span> <span class="post-toc-text">NextStep</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#플래닝"><span class="post-toc-number">2.</span> <span class="post-toc-text">플래닝</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NextStep"><span class="post-toc-number">3.</span> <span class="post-toc-text">NextStep</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#코드스피츠"><span class="post-toc-number">4.</span> <span class="post-toc-text">코드스피츠</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Interface"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Interface</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Iterator-Interface"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Iterator Interface</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#코드스피츠-라이브"><span class="post-toc-number">5.</span> <span class="post-toc-text">코드스피츠 라이브</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#크롱과-리뷰-시간"><span class="post-toc-number">6.</span> <span class="post-toc-text">크롱과 리뷰 시간</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#그냥-작업하면서-배운-점"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">그냥 작업하면서 배운 점</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#잘한점-아쉬운-점"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">잘한점 아쉬운 점</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -500,6 +500,82 @@
 <li>dailyCs50 Ok</li>
 <li>codespitz 복습 …ing</li>
 </ul>
+<blockquote>
+<p>Tab Refactoring</p>
+</blockquote>
+<ul>
+<li>스타일 바꾸면서 클래스 naming 바꾼 부분을 인지 못하고 active 가 안되고 있었는데 다시 되도록 수정</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">    this.tabCardListEl.innerHTML = this.tabCardsTemplate(</span><br><span class="line">      data.map(v =&gt; (&#123;</span><br><span class="line">        items: v.items,</span><br><span class="line">        id: v.category_id,</span><br><span class="line">      &#125;))</span><br><span class="line">    );</span><br><span class="line">인자로 함수 결과 값 넣는 방식 괜찮으려나?</span><br><span class="line"></span><br><span class="line"> this.randomNumber = Math.floor(Math.random() * data.length);</span><br><span class="line">이거 왜 renderTabs에 꼭 있어야 되나? 그 전에 처리 해주어도 되지 않나? 라고 생각했으나 data.length를 받기 때문에 ;;;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  handleActiveButtons(e) &#123;</span><br><span class="line">    this.activedButton.classList.remove(&quot;active&quot;);</span><br><span class="line">    this.activedButton = e.target;</span><br><span class="line">    this.activedButton.classList.add(&quot;active&quot;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleShowTabCard(hideId, showId) &#123;</span><br><span class="line">    const hideCards = qs(`#cards-$&#123;hideId&#125;`, this.tabCardListEl);</span><br><span class="line">    hideCards.classList.add(&quot;hide&quot;);</span><br><span class="line"></span><br><span class="line">    const activedCards = qs(`#cards-$&#123;showId&#125;`, this.tabCardListEl);</span><br><span class="line">    activedCards.classList.remove(&quot;hide&quot;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>다른 사람들이 만든 Tab 참고해서 수정해보자 !!!<br>BootsStrap &amp; bulma &amp; Material</p>
+<h3 id="코드스피츠"><a href="#코드스피츠" class="headerlink" title="코드스피츠"></a>코드스피츠</h3><p>2 번 듣고 정리</p>
+<p>~20 분 iterable / iterator interface</p>
+<h4 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h4><ul>
+<li>사양에 맞는 값과 연결된 속성키의 세트</li>
+</ul>
+<h4 id="Iterator-Interface"><a href="#Iterator-Interface" class="headerlink" title="Iterator Interface"></a>Iterator Interface</h4><p>next(){} 라는 인자를 받지 하는 함수를 키 값으로 갖고<br>Iterator Obj 를 반환한다.<br>next(){<br>return {<br>done<br>value<br>}<br>}</p>
+<p>Iterator Obj 은 done 과 value 를 키 값으로 갖는다.<br>done 을 가지고 iterator 를 계속 돌지 판단한다. !</p>
+<p>앞에 강의를 그래도 조금 듣다가 들어서 Iterable 동작까지는 괜찮았으나</p>
+<h3 id="코드스피츠-라이브"><a href="#코드스피츠-라이브" class="headerlink" title="코드스피츠 라이브"></a>코드스피츠 라이브</h3><p>반도 이해 못함 :D ;;;<br>그래도 우와 코드가 깔금해지는 것 보고 너무 좋잖아<br>플러그인 처럼 추가하기도 너무 좋고 오늘 강의는 저번강의 부터 들어서 완전 숙달 시켜야 될 것 같다.</p>
+<p>강의 들으면서 여러가지 꿀팁도 들었다.</p>
+<ul>
+<li>IF 를 어떻게 뺄것인가 =&gt; IF 문에 해당되는 것들을 객체로 외부로 빼서 추가하는 형식</li>
+<li>성능 관련 Tip 내장 v8 엔진 을 거치는 클래스를 활용 직접 성능을 알고리즘 적으로 줄이려는 노력 미미 -&gt; 어지간한 것들 내장메소드를 활용하 3 + 성능은 97% 렌더링 DOM 조작에서 Rendering 을 신경쓸 것 !</li>
+<li>깨알팁 브라우저에서 testing 할 떄 const 로 계속 test 하는 방법 if(1){}로 감싸서 블락을 지어준다</li>
+<li>꺠알팁 2 깊은복사 쉽게 하기 Json.parse(Json.stringify(data)) 내장 엔진 활용 빠르고 쉽다</li>
+</ul>
+<p>RxJS<br>es6<br>js 는 계속 스펙이 추가되면서 잘 받아들인다. 웹 브라우저에서 동작하는 언어이고 / 이런 점 때문에 js 가 너무 좋다 :D</p>
+<p>루프도 위임<br>코루틴 패턴</p>
+<p>강의가 올라오기 전에 Generator Yield 를 공부하고 얼른 강의 올라오는데로 이해할 때까지 듣자 !!!</p>
+<h3 id="크롱과-리뷰-시간"><a href="#크롱과-리뷰-시간" class="headerlink" title="크롱과 리뷰 시간"></a>크롱과 리뷰 시간</h3><p>나는 잘 활용 하고 있나? 좋은 제자는 별로 아닌 것 같다.<br>어떻게 질문을 안 하냐? 성격 좀 고쳐야지? 남에게 설명할 수 있나?=&gt; No? 그러면 다 모르는 건데?</p>
+<ul>
+<li>Ajax</li>
+</ul>
+<p>비동기 xml/json 등 파일 새로고침 하지 않고 중간계층을 둬서 브라우저가 제공하는 xml httpReq 함수/ 클래스를 통해서 통신한다.<br>좋은 UX 를 제공한다.<br>history web api 를 통해서 이전에 클릭했던 것을 기억할 수 있게도 할 수 있다.</p>
+<p>breakPoint 따로 걸 수 있다.<br>CORS cross-domain 같은 domain 에서 요청이 일어나지 않도록 보안 상의 이유로 막고 있다. jsonp/ header 요청으로 문제 해결할 수 있다.</p>
+<p>비동기에 대해서 어떤 것들을 알아야 할까?<br>내가 뭘 모르고 뭘 알아야 하는지 잘 모르겠었다.</p>
+<ul>
+<li>Animation</li>
+</ul>
+<p>RequestAnimationFrame/ 잘 활용하면 사용자에게 좋은 UX 를 제공할 수 있다 !<br>css transition/transform 을 잘 활용할 것 !!!</p>
+<p>코드리뷰</p>
+<ol>
+<li><p>render -&gt; 정적 data 모아 놓은 것 보통 서버가 렌더링 하고 html 파일로 내려주는 작업을 직접 처리하는 점에서는 뭐 나쁘지 않다.<br>==&gt; 생각 그냥 listItem 은 함수로 해놨으니까 render 방식으로 하는 것이 적당한 것 같은데 dropBox 같은 것들은 안에서 처리하도록 !<br>===&gt; 그런데 문제가 있다. listItem 으로 받고 / 그 안에 dropbox 를 또 렌더링하는 형식이여서 new class 를 dropBox ListItem 에 넘겨주는 형식으로 처리?<br>or 지금과 같은 방식으로 처리해야 하는데 왠지 모듈안에서 렌더링 하는 것도 같이 가지고 있는 것이 좀 더 나은 모듈이라 생각이 되서 전자 방식으로 고치는 방향을 다시 고려해보고 리팩토링 해야겠다 .</p>
+</li>
+<li><p>hover -&gt; subMEnu display-&gt;block 겨우 이걸 어떻게 했는지 기억 못하다니 … 아쉽</p>
+</li>
+<li><p>AjaxHelper =&gt; ajaxHelper 가 아니라 tabAjaxHelper 임 ;;; 이상하게 짰다.</p>
+</li>
+<li><p>State 같은 flag 는 어지간 하면 없앨수록 더 좋음 같이 공유하는 전역변수를 두는 것과 같음 dom 탐색 비용이 높다고 생각했는데 새로 붙이고 repaint 작업정도만 신경쓰자 !!!</p>
+</li>
+<li><p>안 쓰이는 것들 없는지 및 동작 commit 하기 전에 체크할 것 !!!</p>
+</li>
+<li><p>App.js 에서 쭈욱 data 나열 같은 것은 하지 말고 import 형식으로 불러고오고 flow 만 있도록</p>
+</li>
+<li><p>AjaxComponents -&gt; 맞다 그냥 notify 만 하고 data 를 받아와서 다시 보내주고 이 형식으로 바꿔야 된다. 의존성 및 모듈의 의미가 없어짐 !!!</p>
+</li>
+<li><p>tabURl … 전역에 선언해 놓다니 ;;;</p>
+</li>
+<li><p>Ajax onReadyState 보다 -&gt; addEventListener(‘load)를 활용하 3</p>
+</li>
+</ol>
+<h4 id="그냥-작업하면서-배운-점"><a href="#그냥-작업하면서-배운-점" class="headerlink" title="그냥 작업하면서 배운 점"></a>그냥 작업하면서 배운 점</h4><ol>
+<li><p>push 하기 전에 늘 브라우저로 테스트를 하는 습관을 가지자 _=<br>오늘 다시 보내서 망정이지 스타일 고치면서 활성화 하는 부분이 바뀌었었다.</p>
+</li>
+<li><p>왜 내가 짠 코드도 설명을 못하지 어떻게 했는지도 설명을 못하노 바보</p>
+</li>
+<li><p>템플릿 사용에 좀 많이 익숙해졌다. reduce 로</p>
+</li>
+</ol>
+<h4 id="잘한점-아쉬운-점"><a href="#잘한점-아쉬운-점" class="headerlink" title="잘한점 아쉬운 점"></a>잘한점 아쉬운 점</h4><p>잘한점</p>
+<ol>
+<li>모르겠음</li>
+</ol>
+<p>아쉬움</p>
+<ol>
+<li>맨날 늦게 일어난다.</li>
+<li>스터디/ edWidth 스터디 일은 또 벌려놨는데 토요일이 다 되가는데 진행상황 1 도 없음 !;;;;</li>
+</ol>
 
         
     
