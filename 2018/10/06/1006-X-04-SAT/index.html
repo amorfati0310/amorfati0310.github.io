@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Oct 06 2018 17:20:33 GMT+0900">
-        <meta property="article:modified_time" content="Sat Oct 06 2018 17:36:52 GMT+0900">
+        <meta property="article:modified_time" content="Sat Oct 06 2018 20:09:09 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/10/06/1006-X-04-SAT/index.html",
     "headline": "1006-X-04-SAT",
     "datePublished": "Sat Oct 06 2018 17:20:33 GMT+0900",
-    "dateModified": "Sat Oct 06 2018 17:36:52 GMT+0900",
+    "dateModified": "Sat Oct 06 2018 20:09:09 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "John Doe",
@@ -484,16 +484,21 @@
         <h3 id="오늘은"><a href="#오늘은" class="headerlink" title="오늘은"></a>오늘은</h3><p>부족한 부분을 너무 느끼게 해준 과제여서 나름 재미와 보람 ..<br>오늘은 뮤직 플레이어 과제를 끝까지 완성해봐야겠다. </p>
 <p>근데 너무 많이 못해서 아쉽기도 하고 / 그게 내 실력이니 어쩔수 없기도 하고 뭐 그렇다. </p>
 <p>어찌됬든 그 전날 밤을 한 번 새서 제출하고 금요일날은 체력이 계속 멜랑 꼴리하게<br>지내고 _=<br>오늘까지 약간 여파가 오는듯하네 흠’’’ 장기 레이스이므로 운동 러닝+스트레칭 같은 체력 좋아지는 몸관리를 꼭 해야겠다고<br>다시 느끼고 있다. </p>
-<p>고러므로 오늘 밤 부터  러닝 1시간을 시작해야지 </p>
+<p>고러므로 오늘 밤 부터  러닝 h 시작해야지 </p>
 <p>스터디 분들이랑 얘기하면서 힐링 좀 하니 금새 5시반 ‘ㅁ’;;;</p>
 <h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3><ul>
+<li>Daily Algorithm 고민 1시간 및 풀이 </li>
 <li>러닝 1시간 </li>
 <li>Promise공부 .. 오늘 한 것 복습</li>
 <li>Async Generator 를 위해서 매일 1~2시간 You Don’t know Js 책 읽어보기 </li>
 <li>블로그 글은-&gt; Vue 시작하기 관련 Tutorial 처럼 글쓰기 -&gt; 그냥 1주일 동안 Contributon 작업한 내용과 고민을 정리하고 글을 쓰면 될 것 같다 그게 하는 김에 하면 좋으니까 ! </li>
 </ul>
 <p>또 할 것만 보면 매일 18시간 코딩만 해야 될 사람 .. </p>
-<h3 id="TimeTable"><a href="#TimeTable" class="headerlink" title="TimeTable"></a>TimeTable</h3>
+<h3 id="TimeTable"><a href="#TimeTable" class="headerlink" title="TimeTable"></a>TimeTable</h3><p>JS30 </p>
+<p>오늘의 고민 뷰 Class로 부터 확장된 애의 자식을 delegation하고 싶을 떄 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  뷰에서 dom 메소드들이 모두 <span class="keyword">this</span>.el</span><br><span class="line">  qs(selector)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.el.querySelector(selector)</span><br><span class="line">  &#125;</span><br><span class="line">  qsAll(selector)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.el.querySelectorAll(selector)</span><br><span class="line">  &#125;</span><br><span class="line">  on(event, handler,captrue)&#123;</span><br><span class="line">    <span class="keyword">this</span>.el.addEventListener(event, handler, !!captrue)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  delegate(selector, type, callback,captrue) &#123;</span><br><span class="line">    <span class="keyword">const</span> listenerFn = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        e.delegateTarget = e.target.closest(selector);</span><br><span class="line">        e.delegateTarget &amp;&amp; callback(e);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">this</span>.on(type, listenerFn, !!captrue);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">constructor</span>(selector)&#123;</span><br><span class="line">   <span class="keyword">super</span>(selector)</span><br><span class="line">    <span class="keyword">this</span>.MchildrenEl = <span class="keyword">this</span>.qs(<span class="string">'.modal-children'</span>)</span><br><span class="line">    <span class="keyword">this</span>.bindEvents()</span><br><span class="line">    <span class="keyword">this</span>.notifyBtnClicked =<span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  bindEvents()&#123;</span><br><span class="line">    <span class="keyword">this</span>.delegate(<span class="string">'button'</span>,<span class="string">'click'</span>, <span class="keyword">this</span>.handleButtonClicked.bind(<span class="keyword">this</span>))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">오늘의 고민 뷰 Class로 부터 확장된 애의 자식을 delegation하고 싶을 떄 </span><br><span class="line">바보다 ! 그냥 <span class="keyword">this</span>.on에서 target만 좀 바꿔주면 똑같이 쓸 수 있자녀!</span><br><span class="line"> on(event, handler,captrue, containerEl)&#123;</span><br><span class="line">    <span class="keyword">const</span> target = containerEl || <span class="keyword">this</span>.el</span><br><span class="line">    target.addEventListener(event, handler, !!captrue)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  이거는 되는데 왜 </span><br><span class="line"> on(event, handler,captrue, target = <span class="keyword">this</span>.el)&#123;</span><br><span class="line">    target.addEventListener(event, handler, !!captrue)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line"> 이거는 왜 <span class="built_in">Error</span>가 날까?.?  바보다 당연히 인자 순서가 다르니까 ㅜ 디버깅 똑바로 안 할려</span><br></pre></td></tr></table></figure>
+<p>질문의 90%는 뭔가 질문하려고 정리하다보면 해결이 된다는 것이 맞는 것 같다.<br>근데 </p>
+
         
     
 
@@ -512,6 +517,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2018/10/08/1008-X2-01-MON/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            post.newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -611,7 +624,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">July 2018<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">36</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">September 2018<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">August 2018<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">July 2018<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">June 2018<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">36</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">April 2018<span class="sidebar_archives-count">25</span></a>
             </ul>
         </li>
         
